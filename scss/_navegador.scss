@@ -1,0 +1,38 @@
+/* -------------navegador---------------- */
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: $colorNavegador;
+    position: fixed;
+    z-index: 1;
+    & #navegador{
+        min-height: 80px;
+        background-color: $colorNavegador;
+        & #logo{
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            float: left;
+            font-family: $fuente;
+        }
+    & #nav-bar{
+        font-family: $fuente;
+        & #nav-link{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        & #nav-link:hover{
+            color: #aceeff;
+        }
+        & li{
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 12px; 
+        }
+    }    
+    }
+}
+
+ 
+
+/* -------------navegador---------------- */
