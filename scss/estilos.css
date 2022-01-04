@@ -178,12 +178,15 @@ main {
   text-decoration: none;
   -webkit-animation-name: aparecer;
           animation-name: aparecer;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  animation-direction: alternate-reverse;
 }
 
 #section1 .cajaBoton .boton .tex {
@@ -264,13 +267,13 @@ main {
 /* ----------------------------seccion 2---------------------------- */
 .fotosEquipos {
   padding: 25px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .fotosEquipos:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 /* ----------------------------seccion 2---------------------------- */
@@ -355,12 +358,15 @@ main {
   text-decoration: none;
   -webkit-animation-name: aparecer;
           animation-name: aparecer;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  animation-direction: alternate-reverse;
 }
 
 #section3 .cajaBoton .boton .tex {
@@ -487,27 +493,59 @@ footer ul li .icon:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background-image: url(../img/foto1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
 }
 
-.nosotros .contenedorNosotros .imagenesNosotros:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-filter: contrast(80%);
-          filter: contrast(80%);
+.nosotros .contenedorNosotros {
+  margin-top: 20px;
+}
+
+.nosotros .contenedorNosotros .lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  height: 226px;
+  width: 226px;
+  font-family: "Shippori Antique", sans-serif;
+  font-style: oblique;
+  background-color: rgba(62, 128, 161, 0.555);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  font-weight: 10px;
+  padding-left: 5px;
+}
+
+.nosotros .contenedorNosotros .lista:hover {
+  opacity: 1;
 }
 
 .nosotros .contenedorNosotros .nombres {
   color: white;
   font-family: "Shippori Antique", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding-top: 20px;
-  padding-bottom: 20px;
+  text-align: center;
 }
 
 .descripcionFabDupont {
   min-height: calc(100vh - 100px);
   background-color: #2d2c35;
-  background-image: url(../img/fab-dupont-w-700.jpg);
+  background-image: url(../img/fabulous_room_highres.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -575,6 +613,7 @@ footer ul li .icon:hover {
 }
 
 .descripcionFabDupont div div .artistas div {
+  margin: auto 5px;
   width: auto;
 }
 
@@ -745,7 +784,7 @@ footer ul li .icon:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 100%;
   background-color: #2d2c35;
   background-image: url(../img/foto1.jpg);

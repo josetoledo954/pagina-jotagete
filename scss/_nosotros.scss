@@ -5,17 +5,41 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    background-image: url(../img/foto1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
         & .contenedorNosotros{
-            & .imagenesNosotros:hover{
-                transition: 0.5s ;
-                filter: contrast(80%);
+            margin-top: 20px;
+            & .lista{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                color: white;
+                position: absolute;
+                z-index: 2;
+                opacity: 0;
+                height: 226px;
+                width: 226px;
+                font-family: $fuente;
+                font-style: oblique;
+                background-color: rgba(62, 128, 161, 0.555);
+                transition-duration: 1s;
+                font-weight: 10px;
+                padding-left: 5px;
             }
+            .lista:hover{
+                opacity: 1;
+            }
+            
+            
             & .nombres{
                 color: white;
                 font-family: $fuente;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 padding-top: 20px;
-                padding-bottom: 20px;
+                text-align: center;
             }
         }
 }
@@ -24,7 +48,7 @@
 .descripcionFabDupont{
     min-height: calc(100vh - 100px);
     background-color: $colorSecciones;
-    background-image: url(../img/fab-dupont-w-700.jpg);
+    background-image: url(../img/fabulous_room_highres.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -67,6 +91,7 @@
                     padding: 10px;
                     font-style: oblique;
                     & div{
+                        margin: auto 5px;
                         width: auto;
                         @extend p
                     }

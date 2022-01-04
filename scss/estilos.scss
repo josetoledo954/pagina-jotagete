@@ -182,7 +182,7 @@
 
 .precios{
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 100px);
     width: 100%;
     background-color: $colorSecciones;
     background-image: url(../img/foto1.jpg);

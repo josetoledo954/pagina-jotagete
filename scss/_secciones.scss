@@ -65,9 +65,11 @@
             text-decoration: none;
         
             animation-name: aparecer;
-            animation-delay: 5s;
+            animation-delay: 0.5s;
             animation-iteration-count: infinite;
             animation-duration: 2s;
+            transition-duration: 0.5s;
+            animation-direction: alternate-reverse;
             & .tex{
                 color: white;
                 font-size: 30px;
@@ -126,11 +128,12 @@
 
 .fotosEquipos{
     padding: 25px;
+    transition-duration: 0.5s
 }
 
 .fotosEquipos:hover{
     transform: scale(1.2);
-    transition: 0.5s;
+    ;
 }
 
 /* ----------------------------seccion 2---------------------------- */
@@ -193,9 +196,11 @@
             text-decoration: none;
         
             animation-name: aparecer;
-            animation-delay: 5s;
+            animation-delay: 0.5s;
             animation-iteration-count: infinite;
             animation-duration: 2s;
+            transition-duration: 0.5s;
+            animation-direction: alternate-reverse;
             & .tex{
                 color: white;
                 font-size: 30px;
