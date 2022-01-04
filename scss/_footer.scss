@@ -5,10 +5,10 @@ footer{
     height: 100px;
     font-family: $fuente;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     & .textoFooter{
-        height: 100px;
-        width: 20%;
         color: white;
         display: flex;
         align-items: center;
@@ -17,7 +17,6 @@ footer{
         font-size: 15px;
     }
     & ul{
-        height: 100px;
         width: 80%;
         text-align: center;
         display: flex;
@@ -27,10 +26,19 @@ footer{
             color: white;
             list-style-type: none;
             font-size: 12px;
+            .icon{
+                color: white;
+                font-size: 30px;
+            }
+            .icon:hover{
+                color: #aceeff;
+            }
         }
     }
     
 }
+
+
 
 
 /* -------------------footer---------------------------- */

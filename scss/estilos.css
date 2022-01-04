@@ -418,14 +418,17 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .textoFooter {
-  height: 100px;
-  width: 20%;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,7 +444,6 @@ footer .textoFooter {
 }
 
 footer ul {
-  height: 100px;
   width: 80%;
   text-align: center;
   display: -webkit-box;
@@ -461,7 +463,121 @@ footer ul li {
   font-size: 12px;
 }
 
+footer ul li .icon {
+  color: white;
+  font-size: 30px;
+}
+
+footer ul li .icon:hover {
+  color: #aceeff;
+}
+
 /* -------------------footer---------------------------- */
+.nosotros {
+  min-height: calc(100vh - 100px);
+  background-color: #2d2c35;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.nosotros .contenedorNosotros .imagenesNosotros:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-filter: contrast(80%);
+          filter: contrast(80%);
+}
+
+.nosotros .contenedorNosotros .nombres {
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+  font-size: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.descripcionFabDupont {
+  min-height: calc(100vh - 100px);
+  background-color: #2d2c35;
+  background-image: url(../img/fab-dupont-w-700.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.descripcionFabDupont div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.descripcionFabDupont div img {
+  width: 500px;
+  max-height: 500px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.descripcionFabDupont div div {
+  width: 800px;
+}
+
+.descripcionFabDupont div div h3 {
+  font-size: 30px;
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.descripcionFabDupont div div p, .descripcionFabDupont div div .artistas div {
+  color: white;
+  font-size: 17px;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+}
+
+.descripcionFabDupont div div .artistas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: solid 1px white;
+  padding: 10px;
+  font-style: oblique;
+}
+
+.descripcionFabDupont div div .artistas div {
+  width: auto;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -631,7 +747,8 @@ footer ul li {
   display: flex;
   height: 100vh;
   width: 100%;
-  background-image: url(img/foto1.jpg);
+  background-color: #2d2c35;
+  background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -640,6 +757,7 @@ footer ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-blend-mode: overlay;
 }
 
 .contenedorPrecios {
@@ -763,6 +881,9 @@ footer ul li {
     -ms-grid-rows: 1fr 0.8fr 0.2fr;
         grid-template-rows: 1fr 0.8fr 0.2fr;
   }
+  #section1 .cajaTexto .texto {
+    font-size: 30px;
+  }
   #section3 {
     display: -ms-grid;
     display: grid;
@@ -772,7 +893,7 @@ footer ul li {
     -ms-grid-rows: 1fr 0.8fr 0.2fr;
         grid-template-rows: 1fr 0.8fr 0.2fr;
   }
-  .texto {
+  #section3 .cajaTexto .texto {
     font-size: 30px;
   }
   .textoProductos {
@@ -807,6 +928,9 @@ footer ul li {
     -ms-grid-rows: 1fr 0.8fr 0.2fr;
         grid-template-rows: 1fr 0.8fr 0.2fr;
   }
+  #section1 .cajaTexto .texto {
+    font-size: 40px;
+  }
   #section3 {
     display: -ms-grid;
     display: grid;
@@ -816,7 +940,7 @@ footer ul li {
     -ms-grid-rows: 1fr 0.8fr 0.2fr;
         grid-template-rows: 1fr 0.8fr 0.2fr;
   }
-  .texto {
+  #section3 .cajaTexto .texto {
     font-size: 40px;
   }
   .textoProductos {
@@ -851,6 +975,9 @@ footer ul li {
     -ms-grid-rows: 1fr 0.8fr 0.2fr;
         grid-template-rows: 1fr 0.8fr 0.2fr;
   }
+  #section1 .cajaTexto .texto {
+    font-size: 80px;
+  }
   #section3 {
     display: -ms-grid;
     display: grid;
@@ -860,7 +987,7 @@ footer ul li {
     -ms-grid-rows: 1fr 0.8fr 0.2fr;
         grid-template-rows: 1fr 0.8fr 0.2fr;
   }
-  .texto {
+  #section3 .cajaTexto .texto {
     font-size: 80px;
   }
   .textoProductos {
