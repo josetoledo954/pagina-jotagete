@@ -4,6 +4,7 @@
 @import "secciones";
 @import "footer";
 @import "nosotros";
+@import "productos";
 
 
 
@@ -18,7 +19,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -47,132 +48,6 @@
 
 
 
-/* ------------------productos--------------------- */
-.productos{
-    display: grid;
-    min-height: 800px;
-    height: auto;
-    width: 100%;
-    background-image: url(img/foto1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-    grid-template-areas: 
-    "texto enlaces"
-    ;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    
-}
-
-.sectionProductos{
-    min-height: 100vh;
-    height: auto;
-    width: 100%;
-    background-color: rgb(45, 44, 53);
-}    
-
-
-.descripcion{
-    color: white;
-    text-transform: uppercase;
-    
-}
-
-.cajaDetalleProductos{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: rgba(45, 44, 53, 0.712);
-    grid-template: texto;
-    
-}
-
-.detalleProductos{
-    color: white;
-    text-transform: uppercase;
-    font-size: 3.4rem;
-    font-family: 'Shippori Antique', sans-serif;
-    margin-left: 20px;
-}
-
-.descripcionProductos{
-    color: white;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-family: 'Shippori Antique', sans-serif;
-}
-
-.contenedorEnlaces{
-    display: grid;
-    height: 100%;
-    grid-template: enlaces;
-    align-content: space-evenly;
-    justify-content: right;
-}
-
-.textoEnlace{
-    font-size: 40px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Shippori Antique', sans-serif;
-    margin-right: 20px;
-    
-    
-}
-
-.textoEnlace:hover{
-    color: white;
-}
-
-.botonEnlaces{
-    background-color: rgba(250, 74, 74, 0.356);
-    text-align: center;
-}
-
-.botonEnlaces:hover{
-    color: rgb(199, 194, 194);
-    background-color: rgb(255, 0, 0);
-    animation: bouncex 1s linear;
-    animation-iteration-count: infinite;
-    
-}
-
-    @keyframes bouncex {
-        20%,50%,80%,to{
-            transform: translateX(0);
-        }
-        40%{
-            transform: translateX(-30px);
-        }
-        70%{
-            transform: translateX(-15px);
-        }
-        90%{
-            transform: translateX(-4px);
-        }
-    }
-
-
-.fotoProducto{
-    max-height: 500px;
-    max-width: 100%;
-    width: 500px;
-    
-    
-}
-
-.textoProductos{
-    color: white;
-    font-size: 100px;
-    text-transform: uppercase;
-    font-family: 'Shippori Antique', sans-serif;
-}
-
-/* ------------------productos--------------------- */
 
 
 
@@ -235,9 +110,10 @@
 
 .contenedorFormulario{
     display: grid;
-    height: 100vh;
+    min-height: calc(100vh - 100px);
+    height: auto;
     width: 100%;
-    background-image: url(img/foto1.jpg);
+    background-image: url(../img/foto1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -255,6 +131,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 20px;
 }
 
 /* ---------------------------- contacto --------------------------- */

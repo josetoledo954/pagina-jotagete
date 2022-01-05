@@ -12,13 +12,15 @@
     background-blend-mode: overlay;
         & .contenedorNosotros{
             margin-top: 20px;
+            & .imagenesNosotros{
+                max-width: 100%;
+            }
             & .lista{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 color: white;
                 position: absolute;
-                z-index: 2;
                 opacity: 0;
                 height: 226px;
                 width: 226px;
@@ -32,6 +34,17 @@
             .lista:hover{
                 opacity: 1;
             }
+            @keyframes slidein {
+                from {
+                  margin-left: 100%;
+                  width: 300%
+                }
+              
+                to {
+                  margin-left: 0%;
+                  width: 100%;
+                }
+              }
             
             
             & .nombres{
@@ -43,6 +56,9 @@
             }
         }
 }
+
+
+
 
 
 .descripcionFabDupont{
@@ -102,3 +118,241 @@
         
 }
 
+
+
+
+.descripcionCrisLordAlge{
+    min-height: calc(100vh - 100px);
+    background-color: $colorSecciones;
+    background-image: url(../img/chris_lord_alge_-_cla_highres.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+        & div{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            & img{
+                width: 500px;
+                max-height: 500px;
+                max-width: 100%;
+                margin: 20px;
+                border-radius: 20px;
+            }
+            & div{
+                width: 800px;
+                & h3{
+                    font-size: 30px;
+                    color: white;
+                    font-family: $fuente;
+                }
+                & p{
+                    color: white;
+                    font-size: 17px;
+                    font-family: $fuente;
+                    text-align: center;
+                }
+                & .artistas{
+                    display: flex;
+                    width: 100%;
+                    border-top: solid 1px white;
+                    padding: 10px;
+                    font-style: oblique;
+                    & div{
+                        margin: auto 5px;
+                        width: auto;
+                        @extend p
+                    }
+                }
+            }
+            
+        }
+        
+}
+
+
+
+.descripcionAndrewScheps{
+    min-height: calc(100vh - 100px);
+    background-color: $colorSecciones;
+    background-image: url(../img/andrew_scheps_and_his_neve_console_highres.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+        & div{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            & img{
+                width: 500px;
+                max-height: 500px;
+                max-width: 100%;
+                margin: 20px;
+                border-radius: 20px;
+            }
+            & div{
+                width: 800px;
+                & h3{
+                    font-size: 30px;
+                    color: white;
+                    font-family: $fuente;
+                }
+                & p{
+                    color: white;
+                    font-size: 17px;
+                    font-family: $fuente;
+                    text-align: center;
+                }
+                & .artistas{
+                    display: flex;
+                    width: 100%;
+                    border-top: solid 1px white;
+                    padding: 10px;
+                    font-style: oblique;
+                    & div{
+                        margin: auto 5px;
+                        width: auto;
+                        @extend p
+                    }
+                }
+            }
+            
+        }
+        
+}
+
+
+
+
+.descripcionMickGuzauski{
+    min-height: calc(100vh - 100px);
+    background-color: $colorSecciones;
+    background-image: url(../img/mick-guzauski_highres.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+        & div{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            & img{
+                width: 500px;
+                max-height: 500px;
+                max-width: 100%;
+                margin: 20px;
+                border-radius: 20px;
+            }
+            & div{
+                width: 800px;
+                & h3{
+                    font-size: 30px;
+                    color: white;
+                    font-family: $fuente;
+                }
+                & p{
+                    color: white;
+                    font-size: 17px;
+                    font-family: $fuente;
+                    text-align: center;
+                }
+                & .artistas{
+                    display: flex;
+                    width: 100%;
+                    border-top: solid 1px white;
+                    padding: 10px;
+                    font-style: oblique;
+                    & div{
+                        margin: auto 5px;
+                        width: auto;
+                        @extend p
+                    }
+                }
+            }
+            
+        }
+        
+}
+
+
+
+
+.descripcionTonyMaserati{
+    min-height: calc(100vh - 100px);
+    background-color: $colorSecciones;
+    background-image: url(../img/tony-maserati-room.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+        & div{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            & img{
+                width: 500px;
+                max-height: 500px;
+                max-width: 100%;
+                margin: 20px;
+                border-radius: 20px;
+            }
+            & div{
+                width: 800px;
+                & h3{
+                    font-size: 30px;
+                    color: white;
+                    font-family: $fuente;
+                }
+                & p{
+                    color: white;
+                    font-size: 17px;
+                    font-family: $fuente;
+                    text-align: center;
+                }
+                & .artistas{
+                    display: flex;
+                    width: 100%;
+                    border-top: solid 1px white;
+                    padding: 10px;
+                    font-style: oblique;
+                    & div{
+                        margin: auto 5px;
+                        width: auto;
+                        @extend p
+                    }
+                }
+            }
+            
+        }
+        
+}

@@ -1,0 +1,164 @@
+/* ------------------productos--------------------- */
+
+
+.productos{
+    display: grid;
+    min-height: auto;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    background-color: $colorSecciones;
+    background-image: url(../img/foto1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    grid-template-areas: 
+    "texto enlaces"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    
+}
+
+.cajaDetalleProductos{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    grid-template: texto;
+    
+}
+.detalleProductos{
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.4rem;
+    font-family: 'Shippori Antique', sans-serif;
+    margin-left: 20px;
+}
+
+.contenedorEnlaces{
+    display: grid;
+    height: 100%;
+    grid-template: enlaces;
+    align-content: space-evenly;
+    justify-content: right;
+}
+
+.textoEnlace{
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Shippori Antique', sans-serif;
+    margin-right: 20px;
+    
+    
+}
+.textoEnlace:hover{
+    color: white;
+}
+
+.botonEnlaces{
+    background-color: rgba(250, 74, 74, 0.356);
+    text-align: center;
+}
+
+.botonEnlaces:hover{
+    color: rgb(199, 194, 194);
+    background-color: rgb(255, 0, 0);
+    animation: bouncex 1s linear;
+    animation-iteration-count: infinite;
+    
+}
+
+    @keyframes bouncex {
+        20%,50%,80%,to{
+            transform: translateX(0);
+        }
+        40%{
+            transform: translateX(-30px);
+        }
+        70%{
+            transform: translateX(-15px);
+        }
+        90%{
+            transform: translateX(-4px);
+        }
+    }
+.textoEnlace:hover{
+    color: white;
+}
+
+
+
+
+
+.sectionProductos{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background-color: $colorSecciones;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/foto2.jpg);
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    & .contenedorProductos{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background-color: #101010;
+        & .contenedorTextoProductos{
+            width: 800px;
+            & .textoProductos{
+                color: white;
+                font-size: 50px;
+                text-transform: uppercase;
+                font-family: 'Shippori Antique', sans-serif;
+            }
+            & .descripcionProductos{
+                color: white;
+                font-size: 1.5rem;
+                font-family: 'Shippori Antique', sans-serif;
+            }
+        }
+        & .fotoProducto{
+            max-width: 100%;
+            width: 500px;
+            border-radius: 20px;
+        }    
+    }
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------productos--------------------- */

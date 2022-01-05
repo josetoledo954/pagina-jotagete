@@ -1,5 +1,6 @@
 /* -------------navegador---------------- */
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 header {
   height: 80px;
   width: 100%;
@@ -43,6 +44,17 @@ header #navegador #nav-bar li {
 /* ---------------------main----------------------------- */
 main {
   padding-top: 80px;
+}
+
+#h2 {
+  color: white;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  font-size: 50px;
+  padding-top: 20px;
 }
 
 #carousel {
@@ -90,7 +102,7 @@ main {
 /* ---------------------main----------------------------- */
 /* --------------------------secciones----------------------- */
 .section {
-  min-height: 800px;
+  min-height: calc(100vh - 80px);
   height: auto;
   width: 100%;
   background-color: #2d2c35;
@@ -419,8 +431,9 @@ main {
 /* -------------------footer---------------------------- */
 footer {
   background-color: #1c1e25;
-  height: 100px;
-  font-family: "Shippori Antique", sans-serif;
+  min-height: 100px;
+  height: auto;
+  font-family: "Lato", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,24 +442,34 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-footer .textoFooter {
-  color: white;
+footer div {
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .textoFooter {
+  width: 50%;
+  color: white;
   text-transform: uppercase;
   font-size: 15px;
+  margin-top: 10px;
 }
 
 footer ul {
@@ -504,6 +527,10 @@ footer ul li .icon:hover {
   margin-top: 20px;
 }
 
+.nosotros .contenedorNosotros .imagenesNosotros {
+  max-width: 100%;
+}
+
 .nosotros .contenedorNosotros .lista {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,7 +544,6 @@ footer ul li .icon:hover {
           justify-content: space-evenly;
   color: white;
   position: absolute;
-  z-index: 2;
   opacity: 0;
   height: 226px;
   width: 226px;
@@ -532,6 +558,28 @@ footer ul li .icon:hover {
 
 .nosotros .contenedorNosotros .lista:hover {
   opacity: 1;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .nosotros .contenedorNosotros .nombres {
@@ -617,24 +665,315 @@ footer ul li .icon:hover {
   width: auto;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.descripcionCrisLordAlge {
+  min-height: calc(100vh - 100px);
+  background-color: #2d2c35;
+  background-image: url(../img/chris_lord_alge_-_cla_highres.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
-* {
-  margin: 0pt;
-  padding: 0pt;
+.descripcionCrisLordAlge div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.descripcionCrisLordAlge div img {
+  width: 500px;
+  max-height: 500px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.descripcionCrisLordAlge div div {
+  width: 800px;
+}
+
+.descripcionCrisLordAlge div div h3 {
+  font-size: 30px;
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.descripcionCrisLordAlge div div p, .descripcionCrisLordAlge div div .artistas div {
+  color: white;
+  font-size: 17px;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+}
+
+.descripcionCrisLordAlge div div .artistas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: solid 1px white;
+  padding: 10px;
+  font-style: oblique;
+}
+
+.descripcionCrisLordAlge div div .artistas div {
+  margin: auto 5px;
+  width: auto;
+}
+
+.descripcionAndrewScheps {
+  min-height: calc(100vh - 100px);
+  background-color: #2d2c35;
+  background-image: url(../img/andrew_scheps_and_his_neve_console_highres.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.descripcionAndrewScheps div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.descripcionAndrewScheps div img {
+  width: 500px;
+  max-height: 500px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.descripcionAndrewScheps div div {
+  width: 800px;
+}
+
+.descripcionAndrewScheps div div h3 {
+  font-size: 30px;
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.descripcionAndrewScheps div div p, .descripcionAndrewScheps div div .artistas div {
+  color: white;
+  font-size: 17px;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+}
+
+.descripcionAndrewScheps div div .artistas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: solid 1px white;
+  padding: 10px;
+  font-style: oblique;
+}
+
+.descripcionAndrewScheps div div .artistas div {
+  margin: auto 5px;
+  width: auto;
+}
+
+.descripcionMickGuzauski {
+  min-height: calc(100vh - 100px);
+  background-color: #2d2c35;
+  background-image: url(../img/mick-guzauski_highres.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.descripcionMickGuzauski div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.descripcionMickGuzauski div img {
+  width: 500px;
+  max-height: 500px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.descripcionMickGuzauski div div {
+  width: 800px;
+}
+
+.descripcionMickGuzauski div div h3 {
+  font-size: 30px;
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.descripcionMickGuzauski div div p, .descripcionMickGuzauski div div .artistas div {
+  color: white;
+  font-size: 17px;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+}
+
+.descripcionMickGuzauski div div .artistas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: solid 1px white;
+  padding: 10px;
+  font-style: oblique;
+}
+
+.descripcionMickGuzauski div div .artistas div {
+  margin: auto 5px;
+  width: auto;
+}
+
+.descripcionTonyMaserati {
+  min-height: calc(100vh - 100px);
+  background-color: #2d2c35;
+  background-image: url(../img/tony-maserati-room.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.descripcionTonyMaserati div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.descripcionTonyMaserati div img {
+  width: 500px;
+  max-height: 500px;
+  max-width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.descripcionTonyMaserati div div {
+  width: 800px;
+}
+
+.descripcionTonyMaserati div div h3 {
+  font-size: 30px;
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.descripcionTonyMaserati div div p, .descripcionTonyMaserati div div .artistas div {
+  color: white;
+  font-size: 17px;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+}
+
+.descripcionTonyMaserati div div .artistas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: solid 1px white;
+  padding: 10px;
+  font-style: oblique;
+}
+
+.descripcionTonyMaserati div div .artistas div {
+  margin: auto 5px;
+  width: auto;
 }
 
 /* ------------------productos--------------------- */
 .productos {
   display: -ms-grid;
   display: grid;
-  min-height: 800px;
-  height: auto;
+  min-height: auto;
+  min-height: calc(100vh - 80px);
   width: 100%;
-  background-image: url(img/foto1.jpg);
+  background-color: #2d2c35;
+  background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -644,18 +983,6 @@ footer ul li .icon:hover {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-}
-
-.sectionProductos {
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
-  background-color: #2d2c35;
-}
-
-.descripcion {
-  color: white;
-  text-transform: uppercase;
 }
 
 .cajaDetalleProductos {
@@ -669,7 +996,6 @@ footer ul li .icon:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: rgba(45, 44, 53, 0.712);
   grid-template: texto;
 }
 
@@ -679,13 +1005,6 @@ footer ul li .icon:hover {
   font-size: 3.4rem;
   font-family: 'Shippori Antique', sans-serif;
   margin-left: 20px;
-}
-
-.descripcionProductos {
-  color: white;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-family: 'Shippori Antique', sans-serif;
 }
 
 .contenedorEnlaces {
@@ -765,20 +1084,82 @@ footer ul li .icon:hover {
   }
 }
 
-.fotoProducto {
-  max-height: 500px;
-  max-width: 100%;
-  width: 500px;
+.textoEnlace:hover {
+  color: white;
 }
 
-.textoProductos {
+.sectionProductos {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  background-color: #2d2c35;
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../img/foto2.jpg);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+.sectionProductos .contenedorProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #101010;
+}
+
+.sectionProductos .contenedorProductos .contenedorTextoProductos {
+  width: 800px;
+}
+
+.sectionProductos .contenedorProductos .contenedorTextoProductos .textoProductos {
   color: white;
-  font-size: 100px;
+  font-size: 50px;
   text-transform: uppercase;
   font-family: 'Shippori Antique', sans-serif;
 }
 
+.sectionProductos .contenedorProductos .contenedorTextoProductos .descripcionProductos {
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Shippori Antique', sans-serif;
+}
+
+.sectionProductos .contenedorProductos .fotoProducto {
+  max-width: 100%;
+  width: 500px;
+  border-radius: 20px;
+}
+
 /* ------------------productos--------------------- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0pt;
+  padding: 0pt;
+}
+
 /* -----------------precios--------------------------- */
 .precios {
   display: -webkit-box;
@@ -834,9 +1215,10 @@ footer ul li .icon:hover {
 .contenedorFormulario {
   display: -ms-grid;
   display: grid;
-  height: 100vh;
+  min-height: calc(100vh - 100px);
+  height: auto;
   width: 100%;
-  background-image: url(img/foto1.jpg);
+  background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -864,6 +1246,7 @@ footer ul li .icon:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: 20px;
 }
 
 /* ---------------------------- contacto --------------------------- */
