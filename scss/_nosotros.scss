@@ -24,11 +24,11 @@
                 opacity: 0;
                 height: 226px;
                 width: 226px;
-                font-family: $fuente;
+                font-family: $fuenteNueva;
                 font-style: oblique;
                 background-color: rgba(62, 128, 161, 0.555);
                 transition-duration: 1s;
-                font-weight: 10px;
+                font-weight: 10;
                 padding-left: 5px;
             }
             .lista:hover{
@@ -36,17 +36,15 @@
             }
             @keyframes slidein {
                 from {
-                  margin-left: 100%;
-                  width: 300%
+                margin-left: 100%;
+                width: 300%
                 }
-              
                 to {
-                  margin-left: 0%;
-                  width: 100%;
+                margin-left: 0%;
+                width: 100%;
                 }
-              }
-            
-            
+            }
+
             & .nombres{
                 color: white;
                 font-family: $fuente;
@@ -61,10 +59,14 @@
 
 
 
-.descripcionFabDupont{
+
+
+
+// mixins
+
+@mixin descripcion {
     min-height: calc(100vh - 100px);
-    background-color: $colorSecciones;
-    background-image: url(../img/fabulous_room_highres.jpg);
+    background-color: $colorSecciones;  
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -74,257 +76,220 @@
     align-content: center;
     justify-content: center;
     width: 100%;
+}
+
+@mixin artistas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+@mixin imagenes {
+    width: 500px;
+    max-height: 500px;
+    max-width: 100%;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+// mixins
+
+
+
+
+
+// mapas
+
+$estilos:(
+    color-letras: white,
+    fuente-alto: 17px,
+    ancho: 100%,
+);
+
+// mapas
+
+
+
+
+
+
+.descripcionFabDupont{
+    @include descripcion;
+    background-image: url(../img/fabulous_room_highres.jpg);
+    
         & div{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
+            @include artistas;
             & img{
-                width: 500px;
-                max-height: 500px;
-                max-width: 100%;
-                margin: 20px;
-                border-radius: 20px;
+                @include imagenes;
             }
             & div{
                 width: 800px;
                 & h3{
                     font-size: 30px;
-                    color: white;
+                    color: map-get($estilos, color-letras);
                     font-family: $fuente;
                 }
                 & p{
                     color: white;
-                    font-size: 17px;
+                    font-size: map-get($estilos, fuente-alto);
                     font-family: $fuente;
                     text-align: center;
                 }
                 & .artistas{
                     display: flex;
-                    width: 100%;
+                    width: map-get($estilos, ancho);
                     border-top: solid 1px white;
                     padding: 10px;
                     font-style: oblique;
                     & div{
                         margin: auto 5px;
                         width: auto;
-                        @extend p
+                        @extend p;
                     }
                 }
             }
             
         }
-        
 }
 
 
 
 
 .descripcionCrisLordAlge{
-    min-height: calc(100vh - 100px);
-    background-color: $colorSecciones;
+    @include descripcion;
     background-image: url(../img/chris_lord_alge_-_cla_highres.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
+    
         & div{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
+            @include artistas;
             & img{
-                width: 500px;
-                max-height: 500px;
-                max-width: 100%;
-                margin: 20px;
-                border-radius: 20px;
+                @include imagenes;
             }
             & div{
                 width: 800px;
                 & h3{
                     font-size: 30px;
-                    color: white;
+                    color: map-get($estilos, color-letras);
                     font-family: $fuente;
                 }
                 & p{
                     color: white;
-                    font-size: 17px;
+                    font-size: map-get($estilos, fuente-alto);
                     font-family: $fuente;
                     text-align: center;
                 }
                 & .artistas{
                     display: flex;
-                    width: 100%;
+                    width: map-get($estilos, ancho);
                     border-top: solid 1px white;
                     padding: 10px;
                     font-style: oblique;
                     & div{
                         margin: auto 5px;
                         width: auto;
-                        @extend p
+                        @extend p;
                     }
                 }
             }
             
         }
-        
 }
 
 
 
 .descripcionAndrewScheps{
-    min-height: calc(100vh - 100px);
-    background-color: $colorSecciones;
+    @include descripcion;
     background-image: url(../img/andrew_scheps_and_his_neve_console_highres.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
+    
         & div{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
+            @include artistas;
             & img{
-                width: 500px;
-                max-height: 500px;
-                max-width: 100%;
-                margin: 20px;
-                border-radius: 20px;
+                @include imagenes;
             }
             & div{
                 width: 800px;
                 & h3{
                     font-size: 30px;
-                    color: white;
+                    color: map-get($estilos, color-letras);
                     font-family: $fuente;
                 }
                 & p{
                     color: white;
-                    font-size: 17px;
+                    font-size: map-get($estilos, fuente-alto);
                     font-family: $fuente;
                     text-align: center;
                 }
                 & .artistas{
                     display: flex;
-                    width: 100%;
+                    width: map-get($estilos, ancho);
                     border-top: solid 1px white;
                     padding: 10px;
                     font-style: oblique;
                     & div{
                         margin: auto 5px;
                         width: auto;
-                        @extend p
+                        @extend p;
                     }
                 }
             }
             
         }
-        
 }
 
 
 
 
 .descripcionMickGuzauski{
-    min-height: calc(100vh - 100px);
-    background-color: $colorSecciones;
+    @include descripcion;
     background-image: url(../img/mick-guzauski_highres.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
+    
         & div{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
+            @include artistas;
             & img{
-                width: 500px;
-                max-height: 500px;
-                max-width: 100%;
-                margin: 20px;
-                border-radius: 20px;
+                @include imagenes;
             }
             & div{
                 width: 800px;
                 & h3{
                     font-size: 30px;
-                    color: white;
+                    color: map-get($estilos, color-letras);
                     font-family: $fuente;
                 }
                 & p{
                     color: white;
-                    font-size: 17px;
+                    font-size: map-get($estilos, fuente-alto);
                     font-family: $fuente;
                     text-align: center;
                 }
                 & .artistas{
                     display: flex;
-                    width: 100%;
+                    width: map-get($estilos, ancho);
                     border-top: solid 1px white;
                     padding: 10px;
                     font-style: oblique;
                     & div{
                         margin: auto 5px;
                         width: auto;
-                        @extend p
+                        @extend p;
                     }
                 }
             }
             
         }
-        
 }
 
 
 
 
 .descripcionTonyMaserati{
-    min-height: calc(100vh - 100px);
-    background-color: $colorSecciones;
+    @include descripcion;
     background-image: url(../img/tony-maserati-room.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: overlay;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
+    
         & div{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-content: center;
+            @include artistas;
             & img{
-                width: 500px;
-                max-height: 500px;
-                max-width: 100%;
-                margin: 20px;
-                border-radius: 20px;
+                @include imagenes;
             }
             & div{
                 width: 800px;
@@ -348,11 +313,10 @@
                     & div{
                         margin: auto 5px;
                         width: auto;
-                        @extend p
+                        @extend p;
                     }
                 }
             }
             
         }
-        
 }

@@ -46,34 +46,35 @@ main {
   padding-top: 80px;
 }
 
+#section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
 #h2 {
   color: white;
   text-align: center;
   font-family: "Lato", sans-serif;
-  position: absolute;
-  height: 100px;
-  width: 100%;
+  height: 50px;
+  width: 700px;
+  max-width: 100%;
   font-size: 50px;
-  padding-top: 20px;
 }
 
-#carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100vh - 110px);
-  width: 100%;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#carousel #carouselExampleIndicators {
-  height: auto;
-  max-width: 100%;
-  width: 1000px;
+.cajaBotonMain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,150 +86,25 @@ main {
           align-items: center;
 }
 
-#carousel .carousel-item {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-#carousel .carousel-item .iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* ---------------------main----------------------------- */
-/* --------------------------secciones----------------------- */
-.section {
-  min-height: calc(100vh - 80px);
-  height: auto;
-  width: 100%;
-  background-color: #2d2c35;
-}
-
-/* --------------------------secciones----------------------- */
-/* -----------------------------seccion 1---------------------------- */
-#section1 {
-  background-image: url(../img/foto1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "video texto" "video boton";
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 80% 20%;
-      grid-template-rows: 80% 20%;
-}
-
-#section1 .contenedorVideo {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: video;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#section1 .contenedorVideo .videos1 {
-  height: 315px;
-  width: 560px;
-  max-width: 100%;
-}
-
-#section1 .cajaTexto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: texto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-}
-
-#section1 .cajaTexto .texto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  width: 100%;
-  color: white;
-  font-size: 100px;
-  text-transform: uppercase;
-  font-family: "Shippori Antique", sans-serif;
-}
-
-#section1 .cajaBoton {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: boton;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-#section1 .cajaBoton .boton {
-  height: 100px;
-  width: 300px;
+.cajaBotonMain .botonMain {
+  height: 80px;
+  width: 250px;
   background-color: rgba(250, 74, 74, 0.356);
   text-decoration: none;
-  -webkit-animation-name: aparecer;
-          animation-name: aparecer;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  animation-direction: alternate-reverse;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-#section1 .cajaBoton .boton .tex {
+.cajaBotonMain .botonMain .tex {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
   font-family: "Shippori Antique", sans-serif;
   text-align: center;
-  line-height: 100px;
+  line-height: 80px;
 }
 
-@-webkit-keyframes aparecer {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes aparecer {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-#section1 .cajaBoton .boton:hover {
+.cajaBotonMain .botonMain:hover {
   color: #c7c2c2;
   background-color: red;
   -webkit-animation: bounce 1s linear;
@@ -275,6 +151,192 @@ main {
   }
 }
 
+#carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  width: 700px;
+  max-width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#carousel #carouselExampleIndicators {
+  height: auto;
+  max-width: 100%;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 700px;
+}
+
+#carousel .carousel-item {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+#carousel .carousel-item .iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------main----------------------------- */
+/* --------------------------secciones----------------------- */
+.section {
+  min-height: calc(100vh - 80px);
+  height: auto;
+  width: 100%;
+  background-color: #2d2c35;
+}
+
+/* --------------------------secciones----------------------- */
+/* -----------------------------seccion 1---------------------------- */
+#section1 {
+  background-image: url(../img/foto1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "video texto";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#section1 .contenedorVideo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: video;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#section1 .contenedorVideo .videos1 {
+  height: 315px;
+  width: 560px;
+  max-width: 100%;
+}
+
+#section1 .cajaTexto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: texto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+#section1 .cajaTexto .texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 80%;
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+#section1 .cajaTexto p, #section1 .cajaTexto .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas #section1 .cajaTexto div {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  width: 80%;
+}
+
+#section1 .cajaBoton {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: boton;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 80%;
+}
+
+#section1 .cajaBoton .boton {
+  height: 80px;
+  width: 250px;
+  background-color: rgba(250, 74, 74, 0.356);
+  text-decoration: none;
+  border-radius: 20px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  margin-bottom: 20px;
+}
+
+#section1 .cajaBoton .boton .tex {
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+  line-height: 80px;
+}
+
+#section1 .cajaBoton .boton:hover {
+  color: #c7c2c2;
+  background-color: red;
+  -webkit-animation: bounce 1s linear;
+          animation: bounce 1s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  20%, 50%, 80%, to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  70% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  90% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+}
+
 /* -----------------------------seccion 1---------------------------- */
 /* ----------------------------seccion 2---------------------------- */
 .fotosEquipos {
@@ -298,7 +360,7 @@ main {
   background-blend-mode: overlay;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "video texto" "video boton";
+      grid-template-areas: "video texto" "boton boton";
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 80% 20%;
@@ -309,7 +371,6 @@ main {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: video;
   -ms-flex-line-pack: center;
@@ -330,7 +391,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: texto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -354,7 +415,8 @@ main {
   display: -ms-grid;
   display: grid;
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: boton;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -388,15 +450,6 @@ main {
   font-family: "Shippori Antique", sans-serif;
   text-align: center;
   line-height: 100px;
-}
-
-@keyframes aparecer {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 #section3 .cajaBoton .boton:hover {
@@ -547,12 +600,12 @@ footer ul li .icon:hover {
   opacity: 0;
   height: 226px;
   width: 226px;
-  font-family: "Shippori Antique", sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: oblique;
   background-color: rgba(62, 128, 161, 0.555);
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
-  font-weight: 10px;
+  font-weight: 10;
   padding-left: 5px;
 }
 
@@ -593,7 +646,6 @@ footer ul li .icon:hover {
 .descripcionFabDupont {
   min-height: calc(100vh - 100px);
   background-color: #2d2c35;
-  background-image: url(../img/fabulous_room_highres.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -609,6 +661,7 @@ footer ul li .icon:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  background-image: url(../img/fabulous_room_highres.jpg);
 }
 
 .descripcionFabDupont div {
@@ -668,7 +721,6 @@ footer ul li .icon:hover {
 .descripcionCrisLordAlge {
   min-height: calc(100vh - 100px);
   background-color: #2d2c35;
-  background-image: url(../img/chris_lord_alge_-_cla_highres.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -684,6 +736,7 @@ footer ul li .icon:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  background-image: url(../img/chris_lord_alge_-_cla_highres.jpg);
 }
 
 .descripcionCrisLordAlge div {
@@ -743,7 +796,6 @@ footer ul li .icon:hover {
 .descripcionAndrewScheps {
   min-height: calc(100vh - 100px);
   background-color: #2d2c35;
-  background-image: url(../img/andrew_scheps_and_his_neve_console_highres.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -759,6 +811,7 @@ footer ul li .icon:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  background-image: url(../img/andrew_scheps_and_his_neve_console_highres.jpg);
 }
 
 .descripcionAndrewScheps div {
@@ -818,7 +871,6 @@ footer ul li .icon:hover {
 .descripcionMickGuzauski {
   min-height: calc(100vh - 100px);
   background-color: #2d2c35;
-  background-image: url(../img/mick-guzauski_highres.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -834,6 +886,7 @@ footer ul li .icon:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  background-image: url(../img/mick-guzauski_highres.jpg);
 }
 
 .descripcionMickGuzauski div {
@@ -893,7 +946,6 @@ footer ul li .icon:hover {
 .descripcionTonyMaserati {
   min-height: calc(100vh - 100px);
   background-color: #2d2c35;
-  background-image: url(../img/tony-maserati-room.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -909,6 +961,7 @@ footer ul li .icon:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  background-image: url(../img/tony-maserati-room.png);
 }
 
 .descripcionTonyMaserati div {
@@ -967,125 +1020,89 @@ footer ul li .icon:hover {
 
 /* ------------------productos--------------------- */
 .productos {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: auto;
   min-height: calc(100vh - 80px);
   width: 100%;
   background-color: #2d2c35;
-  background-image: url(../img/foto1.jpg);
-  background-size: cover;
-  background-position: center;
+  background-image: url(../img/foto2.jpg);
   background-attachment: fixed;
   background-blend-mode: overlay;
-      grid-template-areas: "texto enlaces";
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
 }
 
-.cajaDetalleProductos {
-  height: 100%;
+.productos .cajaDetalleProductos {
+  height: auto;
+  max-width: 800px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  grid-template: texto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.detalleProductos {
+.productos .cajaDetalleProductos .detalleProductos {
   color: white;
   text-transform: uppercase;
-  font-size: 3.4rem;
+  font-size: 2rem;
   font-family: 'Shippori Antique', sans-serif;
-  margin-left: 20px;
+  margin: 10px;
 }
 
-.contenedorEnlaces {
-  display: -ms-grid;
-  display: grid;
-  height: 100%;
-  grid-template: enlaces;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+.productos .cajaDetalleProductos p, .productos .cajaDetalleProductos .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas .productos .cajaDetalleProductos div {
+  color: white;
+  font-size: 20px;
+  font-family: "Shippori Antique", sans-serif;
+  margin: 10px;
 }
 
-.textoEnlace {
-  font-size: 40px;
+.productos .contenedorEnlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  max-width: 100%;
+}
+
+.productos .contenedorEnlaces .textoEnlace {
+  height: 50px;
+  padding: 0px 20px;
+  font-size: 20px;
+  text-align: center;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Shippori Antique', sans-serif;
-  margin-right: 20px;
-}
-
-.textoEnlace:hover {
-  color: white;
-}
-
-.botonEnlaces {
+  font-family: "Shippori Antique", sans-serif;
   background-color: rgba(250, 74, 74, 0.356);
-  text-align: center;
+  border-radius: 20px;
+  margin: 5px;
+  line-height: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.botonEnlaces:hover {
-  color: #c7c2c2;
-  background-color: red;
-  -webkit-animation: bouncex 1s linear;
-          animation: bouncex 1s linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes bouncex {
-  20%, 50%, 80%, to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  40% {
-    -webkit-transform: translateX(-30px);
-            transform: translateX(-30px);
-  }
-  70% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
-  }
-  90% {
-    -webkit-transform: translateX(-4px);
-            transform: translateX(-4px);
-  }
-}
-
-@keyframes bouncex {
-  20%, 50%, 80%, to {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  40% {
-    -webkit-transform: translateX(-30px);
-            transform: translateX(-30px);
-  }
-  70% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
-  }
-  90% {
-    -webkit-transform: translateX(-4px);
-            transform: translateX(-4px);
-  }
-}
-
-.textoEnlace:hover {
+.productos .contenedorEnlaces .textoEnlace:hover {
   color: white;
+  background-color: red;
 }
 
 .sectionProductos {
@@ -1218,6 +1235,7 @@ footer ul li .icon:hover {
   min-height: calc(100vh - 100px);
   height: auto;
   width: 100%;
+  background-color: #2d2c35;
   background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
@@ -1227,6 +1245,7 @@ footer ul li .icon:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-blend-mode: overlay;
 }
 
 .formulario {
@@ -1256,7 +1275,7 @@ footer ul li .icon:hover {
   display: grid;
   height: 100vh;
   width: 100%;
-  background-image: url(img/foto1.jpg);
+  background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
