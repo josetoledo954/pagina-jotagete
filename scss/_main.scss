@@ -1,5 +1,5 @@
 /* ---------------------main----------------------------- */
-// *{border: solid blue 2PX;}
+
 main{
     padding-top: 80px;
     
@@ -13,6 +13,7 @@ main{
     // background-image: url(../img/foto2.jpg);
     background-size: cover;
     background-blend-mode: overlay;
+    height: calc(100vh - 80px);
 }
 
 #h2{

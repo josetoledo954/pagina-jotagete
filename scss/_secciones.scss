@@ -130,15 +130,29 @@
 /* ----------------------------seccion 2---------------------------- */
 
 
-.fotosEquipos{
-    padding: 25px;
-    transition-duration: 0.5s
+#section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & h3{
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2em;
+        font-family: $fuente;
+        text-transform: uppercase;
+    }
 }
 
-.fotosEquipos:hover{
-    transform: scale(1.2);
-    ;
+#carouselExampleCaptions{
+    width: 800px;
+    max-width: 100%;
 }
+
+
+
+
+
 
 /* ----------------------------seccion 2---------------------------- */
 
@@ -250,3 +264,47 @@
 
 /* -----------------------------------seccion 3----------------------------- */
 
+#section4{
+    min-height: auto;
+    text-align: center;
+    & h2{
+        color: white;
+        font-family: $fuente;
+        text-transform: uppercase;
+        font-size: 2rem;
+        padding: 0.5em;
+        margin: 0;
+    }
+}
+
+.fotosmodal{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#modal-content{
+    width: auto;
+    height: auto;
+}
+
+#modal-dialog{
+    width: 500px;
+    height: auto;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenModal{
+    height: 500px;   
+    width: auto;
+}
+
+.fotosModal{
+    width: 450px;
+    max-width: 100%;
+    margin: 1em 0;
+}
