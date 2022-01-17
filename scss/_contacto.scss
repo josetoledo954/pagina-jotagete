@@ -1,0 +1,60 @@
+/* ---------------------------- contacto --------------------------- */
+
+
+.contenedorFormulario{
+    display: grid;
+    min-height: calc(100vh - 100px);
+    height: auto;
+    width: 100%;
+    background-color: $colorSecciones;
+    background-image: url(../img/foto1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-content: center;
+    justify-content: center;
+    background-blend-mode: overlay;
+}
+
+.formulario{
+    height: 700px;
+    width: 100%;
+    // max-width: 1200px;
+    display: flex;
+    background-color: rgba(45, 44, 53, 0.712);
+    color: white;
+    font-family: 'Shippori Antique', sans-serif;
+    flex-direction: column;
+    justify-content: space-evenly;
+    & h2{
+        color: white;
+        font-family: $fuente;
+        font-size: 2.5rem;
+        // text-transform: uppercase;
+        text-align: center;
+    }
+    & .cajaForm{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        & div{
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            font-family: $fuente;
+        }
+    }
+    & .botonesForm{
+        max-width: 100%;
+        text-align: center;
+        font-family: $fuente;
+        & input{
+            width: 250px;
+        }
+    }
+}
+
+/* ---------------------------- contacto --------------------------- */

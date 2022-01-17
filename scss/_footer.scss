@@ -11,33 +11,23 @@ footer{
     padding-top: 50px;
     & div{
         width: 200px;
-        // padding: 5px;
-        & h2{
-            color: rgb(150, 150, 150);
-            font-family: $fuente;
-            font-size: 1.2rem;
-            margin-top: 10px;
-            text-transform: uppercase;
-        }
-        & p{
-            color: rgb(177, 177, 177);
-        }
         & .textoFooter{
-            color: rgb(151, 151, 151);
+            color: rgb(160, 160, 160);
             text-transform: uppercase;
             font-size: 1.2rem;
             margin-top: 10px;
             font-family: $fuente;
         }
         & ul{
+            padding-top: 20px;
             & li{
                 list-style-type: none;
                 margin: 20px 0;
-                color: rgb(163, 163, 163);
+                color: rgb(160, 160, 160);
                 font-family: $fuenteNueva;
                 font-size: 1rem;
                 .icon{
-                    color: rgb(145, 145, 145);
+                    color: rgb(160, 160, 160);
                     font-size: 1.2rem;
                     margin-right: 10px;
                 }
@@ -46,7 +36,7 @@ footer{
                 }
                 & a{
                     text-decoration: none;
-                    color: rgb(143, 143, 143);
+                    color: rgb(160, 160, 160);
                     font-family: $fuenteNueva;
                     font-size: 1rem;
                 }

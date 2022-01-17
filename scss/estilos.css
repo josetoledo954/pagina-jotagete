@@ -525,9 +525,9 @@ main {
 }
 
 #section3 .cajaTexto p, #section3 .cajaTexto .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas #section3 .cajaTexto div {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 1.1rem;
+  color: #a0a0a0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
   width: 80%;
 }
 
@@ -681,36 +681,28 @@ footer div {
   width: 200px;
 }
 
-footer div h2 {
-  color: #969696;
-  font-family: "Shippori Antique", sans-serif;
-  font-size: 1.2rem;
-  margin-top: 10px;
-  text-transform: uppercase;
-}
-
-footer div p, footer .descripcionFabDupont div div .artistas div, .descripcionFabDupont footer div div .artistas div, footer .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge footer div div .artistas div, footer .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps footer div div .artistas div, footer .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski footer div div .artistas div, footer .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati footer div div .artistas div {
-  color: #b1b1b1;
-}
-
 footer div .textoFooter {
-  color: #979797;
+  color: #a0a0a0;
   text-transform: uppercase;
   font-size: 1.2rem;
   margin-top: 10px;
   font-family: "Shippori Antique", sans-serif;
+}
+
+footer div ul {
+  padding-top: 20px;
 }
 
 footer div ul li {
   list-style-type: none;
   margin: 20px 0;
-  color: #a3a3a3;
+  color: #a0a0a0;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
 }
 
 footer div ul li .icon {
-  color: #919191;
+  color: #a0a0a0;
   font-size: 1.2rem;
   margin-right: 10px;
 }
@@ -721,7 +713,7 @@ footer div ul li .iconR:hover {
 
 footer div ul li a {
   text-decoration: none;
-  color: #8f8f8f;
+  color: #a0a0a0;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
 }
@@ -1467,67 +1459,6 @@ footer div ul li a:hover {
 }
 
 /* -----------------precios--------------------------- */
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-* {
-  margin: 0pt;
-  padding: 0pt;
-}
-
-/* -----------------precios--------------------------- */
-.precios {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: calc(100vh - 100px);
-  width: 100%;
-  background-color: #202020;
-  background-image: url(../img/foto1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-blend-mode: overlay;
-}
-
-.contenedorPrecios {
-  display: -ms-grid;
-  display: grid;
-  height: 100%;
-  -ms-flex-line-pack: space-evenly;
-      align-content: space-evenly;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-.textoPrecios {
-  font-size: 40px;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Shippori Antique', sans-serif;
-  margin: 20px;
-}
-
-.botonPrecios {
-  background-color: rgba(45, 44, 53, 0.712);
-  text-align: center;
-}
-
-.botonPrecios:hover {
-  color: #c7c2c2;
-  background-color: red;
-}
-
-/* -----------------precios--------------------------- */
 /* ---------------------------- contacto --------------------------- */
 .contenedorFormulario {
   display: -ms-grid;
@@ -1550,14 +1481,13 @@ footer div ul li a:hover {
 
 .formulario {
   height: 700px;
-  max-width: 500px;
-  background-color: rgba(45, 44, 53, 0.712);
-  color: white;
-  font-family: 'Shippori Antique', sans-serif;
-  padding: 5%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: rgba(45, 44, 53, 0.712);
+  color: white;
+  font-family: 'Shippori Antique', sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1565,7 +1495,50 @@ footer div ul li a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.formulario h2 {
+  color: white;
+  font-family: "Shippori Antique", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.formulario .cajaForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.formulario .cajaForm div {
   margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.formulario .botonesForm {
+  max-width: 100%;
+  text-align: center;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.formulario .botonesForm input {
+  width: 250px;
 }
 
 /* ---------------------------- contacto --------------------------- */
@@ -1608,6 +1581,16 @@ footer div ul li a:hover {
 }
 
 /* --------------------envios--------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0pt;
+  padding: 0pt;
+}
+
 /* -------------------media 0px - 320px------------------- */
 @media only screen and (max-width: 320px) {
   .logo {

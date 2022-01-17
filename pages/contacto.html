@@ -50,15 +50,20 @@
     </header>
     <main class="contenedorFormulario">
         <form class="formulario" action="enviar.php" method="post" enctype="application/x-www-form-urlencoded">
-            <h2>Completa El Formulario</h2>
-                
+            <h2>Envianos Tu Consulta</h2>
+          <div class="cajaForm">
+            <div>   
             <label for="nombre">Nombre</label>
                 <input type="text" placeholder="Tu Nombre" id="nombre">
-                <!-- <br> -->
+            </div> 
+            
+            <div>
             <label for="email">Email</label>
                 <input type="email" placeholder="ejemplo@email.com" id="email">
-                <!-- <br> -->
-            <label for="estilo">Que Estilo Haces</label>	
+            </div>
+
+            <div>
+              <label for="estilo">Que Estilo Haces</label>	
                 <select id="estilo"> 
                 <option value="Pop">Pop</option>
                 <option value="Electronica">Electronica</option>
@@ -68,33 +73,43 @@
                 <option value="Alternativa">Alternativa</option>
                 <option value="Sin Especificar">Sin Especificar</option>
                 </select>
-                <!-- <br> -->
-            <p>Conoces Nuestros Trabajos</p>
+            </div>
+
+            <!-- <div>
+              <p>Conoces Nuestros Trabajos</p>
                 <label for="si">Si</label>  
                 <input type="radio" name="marca" id="si" value="si">
                 <label for="no">No</label>                  
                 <input type="radio" name="marca" id="no" value="no">
-                <!-- <br> -->
-            <label for="comentarios">Comentarios</label>
-            <!-- <br> -->
+              </div> -->
+
+              <div>
+                <label for="comentarios">Comentarios</label>
                 <textarea rows="5" cols="20" id="comentarios" placeholder="Comentarios"></textarea>
-            <p>Como Supiste De Nosotros</p>
+              </div>
+
+            <!-- <div>
+              <p>Como Supiste De Nosotros</p>
                 <label for="redes">Redes Sociales</label>   
                 <input type="checkbox" id="redes" value="1">
                 <label for="radio">Radio</label>
                 <input type="checkbox" id="radio" value="1">
                 <label for="tv">Tv</label>
                 <input type="checkbox" id="tv" value="1">
-            
+            </div> -->
+
+          </div>
+            <div class="botonesForm">
             <p>Al Presionar Enviar Acepta Los Terminos</p>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Borrar Todo">
+            </div>
         </form>
     </main>
     
     <footer>
       <div>
-        <h2>Contacto</h2>
+        <h3 class="textoFooter">Contacto</h3>
         <ul class="list-unstyled">
           <li>
             Correo: info@gotagete.com
