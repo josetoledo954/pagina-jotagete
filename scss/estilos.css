@@ -26,7 +26,7 @@ header #navegador #nav-bar {
 }
 
 header #navegador #nav-bar #nav-link {
-  color: white;
+  color: #a0a0a0;
   text-decoration: none;
 }
 
@@ -199,15 +199,15 @@ main {
 /* ---------------------main----------------------------- */
 /* --------------------------secciones----------------------- */
 .section {
-  min-height: calc(100vh - 80px);
   height: auto;
   width: 100%;
-  background-color: #2d2c35;
+  background-color: #202020;
 }
 
 /* --------------------------secciones----------------------- */
 /* -----------------------------seccion 1---------------------------- */
 #section1 {
+  min-height: calc(100vh - 80px);
   background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
@@ -234,8 +234,8 @@ main {
 }
 
 #section1 .contenedorVideo .videos1 {
-  height: 315px;
-  width: 560px;
+  height: 378px;
+  width: 672px;
   max-width: 100%;
 }
 
@@ -263,24 +263,21 @@ main {
   height: auto;
   width: 80%;
   color: white;
-  font-size: 50px;
+  font-size: 5rem;
   text-transform: uppercase;
   font-family: "Shippori Antique", sans-serif;
 }
 
 #section1 .cajaTexto p, #section1 .cajaTexto .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas #section1 .cajaTexto div, #section1 .cajaTexto .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas #section1 .cajaTexto div {
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 17px;
+  color: #a0a0a0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
   width: 80%;
 }
 
 #section1 .cajaBoton {
   display: -ms-grid;
   display: grid;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: boton;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -341,27 +338,97 @@ main {
 /* -----------------------------seccion 1---------------------------- */
 /* ----------------------------seccion 2---------------------------- */
 #section2 {
+  min-height: 700px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-#section2 h3 {
+#section2 .contenedorSomos h3 {
   color: white;
-  font-size: 2rem;
-  margin-bottom: 2em;
+  font-size: 3.2rem;
+  margin-bottom: 0.5em;
   font-family: "Shippori Antique", sans-serif;
   text-transform: uppercase;
+}
+
+#section2 .contenedorSomos p, #section2 .contenedorSomos .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas #section2 .contenedorSomos div, #section2 .contenedorSomos .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas #section2 .contenedorSomos div, #section2 .contenedorSomos .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas #section2 .contenedorSomos div, #section2 .contenedorSomos .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas #section2 .contenedorSomos div, #section2 .contenedorSomos .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas #section2 .contenedorSomos div {
+  font-size: 1rem;
+  color: #a0a0a0;
+  max-width: 500px;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#section2 .contenedorSomos .cajaBoton {
+  display: -ms-grid;
+  display: grid;
+  grid-area: boton;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+}
+
+#section2 .contenedorSomos .cajaBoton .boton {
+  background-color: rgba(250, 74, 74, 0.356);
+  text-decoration: none;
+  border-radius: 0.8em;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  padding: 0.8em;
+  margin: 0.5em;
+}
+
+#section2 .contenedorSomos .cajaBoton .boton .tex {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Shippori Antique", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+#section2 .contenedorSomos .cajaBoton .boton:hover {
+  background-color: red;
+  -webkit-animation: bounce 1s linear;
+          animation: bounce 1s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  20%, 50%, 80%, to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  70% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  90% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
 }
 
 #carouselExampleCaptions {
@@ -369,9 +436,34 @@ main {
   max-width: 100%;
 }
 
+.carousel-caption {
+  background-color: rgba(105, 105, 105, 0.349);
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+}
+
+.carousel-caption h5 a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.carousel-caption h5 a:hover {
+  color: #aee0ec;
+}
+
+.carousel-caption p, .carousel-caption .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas .carousel-caption div, .carousel-caption .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas .carousel-caption div, .carousel-caption .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas .carousel-caption div, .carousel-caption .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas .carousel-caption div, .carousel-caption .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas .carousel-caption div {
+  color: white;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
 /* ----------------------------seccion 2---------------------------- */
 /* -----------------------------------seccion 3----------------------------- */
 #section3 {
+  min-height: calc(100vh - 80px);
   background-image: url(../img/foto2.jpg);
   background-size: cover;
   background-position: center;
@@ -379,11 +471,9 @@ main {
   background-blend-mode: overlay;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "video texto" "boton boton";
+      grid-template-areas: "video texto";
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 80% 20%;
-      grid-template-rows: 80% 20%;
 }
 
 #section3 .contenedorVideo {
@@ -400,8 +490,8 @@ main {
 }
 
 #section3 .contenedorVideo .videos1 {
-  height: 315px;
-  width: 560px;
+  height: 378px;
+  width: 672px;
   max-width: 100%;
 }
 
@@ -409,13 +499,17 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: texto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
 }
 
 #section3 .cajaTexto .texto {
@@ -423,52 +517,50 @@ main {
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  width: 100%;
+  width: 80%;
   color: white;
-  font-size: 100px;
+  font-size: 5rem;
   text-transform: uppercase;
   font-family: "Shippori Antique", sans-serif;
+}
+
+#section3 .cajaTexto p, #section3 .cajaTexto .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas #section3 .cajaTexto div, #section3 .cajaTexto .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas #section3 .cajaTexto div {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+  width: 80%;
 }
 
 #section3 .cajaBoton {
   display: -ms-grid;
   display: grid;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: boton;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  width: 80%;
 }
 
 #section3 .cajaBoton .boton {
-  height: 100px;
-  width: 300px;
+  height: 80px;
+  width: 250px;
   background-color: rgba(250, 74, 74, 0.356);
   text-decoration: none;
-  -webkit-animation-name: aparecer;
-          animation-name: aparecer;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  border-radius: 20px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  animation-direction: alternate-reverse;
+  margin-bottom: 20px;
 }
 
 #section3 .cajaBoton .boton .tex {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
   font-family: "Shippori Antique", sans-serif;
   text-align: center;
-  line-height: 100px;
+  line-height: 80px;
 }
 
 #section3 .cajaBoton .boton:hover {
@@ -500,8 +592,9 @@ main {
 }
 
 /* -----------------------------------seccion 3----------------------------- */
+/* -----------------------------------seccion 4----------------------------- */
 #section4 {
-  min-height: auto;
+  min-height: 800px;
   text-align: center;
 }
 
@@ -510,11 +603,11 @@ main {
   font-family: "Shippori Antique", sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
-  padding: 0.5em;
+  padding: 3em 0 0.5em;
   margin: 0;
 }
 
-.fotosmodal {
+.galeriaModal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,8 +631,6 @@ main {
 }
 
 #modal-dialog {
-  width: 500px;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,20 +643,27 @@ main {
 }
 
 .imagenModal {
-  height: 500px;
-  width: auto;
+  max-width: 100%;
+  width: 800px;
 }
 
 .fotosModal {
   width: 450px;
   max-width: 100%;
-  margin: 1em 0;
+  margin: 0.5em 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
+.fotosModal:hover {
+  opacity: 0.5;
+}
+
+/* -----------------------------------seccion 4----------------------------- */
 /* -------------------footer---------------------------- */
 footer {
   background-color: #1c1e25;
-  min-height: 100px;
+  min-height: 400px;
   height: auto;
   font-family: "Lato", sans-serif;
   display: -webkit-box;
@@ -573,16 +671,74 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding-top: 50px;
 }
 
 footer div {
-  width: 500px;
+  width: 200px;
+}
+
+footer div h2 {
+  color: #969696;
+  font-family: "Shippori Antique", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+footer div p, footer .descripcionFabDupont div div .artistas div, .descripcionFabDupont footer div div .artistas div, footer .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge footer div div .artistas div, footer .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps footer div div .artistas div, footer .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski footer div div .artistas div, footer .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati footer div div .artistas div {
+  color: #b1b1b1;
+}
+
+footer div .textoFooter {
+  color: #979797;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+footer div ul li {
+  list-style-type: none;
+  margin: 20px 0;
+  color: #a3a3a3;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+footer div ul li .icon {
+  color: #919191;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+footer div ul li .iconR:hover {
+  color: #aceeff;
+}
+
+footer div ul li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+footer div ul li a:hover {
+  color: #aceeff;
+}
+
+/* -------------------footer---------------------------- */
+.nosotros {
+  min-height: calc(100vh - 100px);
+  background-color: #202020;
+  background-image: url(../img/foto1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,55 +746,21 @@ footer div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-footer .textoFooter {
-  width: 50%;
+.nosotros h3 {
   color: white;
-  text-transform: uppercase;
-  font-size: 15px;
-  margin-top: 10px;
-}
-
-footer ul {
-  width: 80%;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Shippori Antique", sans-serif;
+  margin-bottom: 2.5em;
 }
 
-footer ul li {
-  color: white;
-  list-style-type: none;
-  font-size: 12px;
-}
-
-footer ul li .icon {
-  color: white;
-  font-size: 30px;
-}
-
-footer ul li .iconR:hover {
-  color: #aceeff;
-}
-
-/* -------------------footer---------------------------- */
-.nosotros {
-  min-height: calc(100vh - 100px);
-  background-color: #2d2c35;
+.nosotros .cajaN {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,22 +772,17 @@ footer ul li .iconR:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-image: url(../img/foto1.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-blend-mode: overlay;
 }
 
-.nosotros .contenedorNosotros {
+.nosotros .cajaN .contenedorNosotros {
   margin-top: 20px;
 }
 
-.nosotros .contenedorNosotros .imagenesNosotros {
+.nosotros .cajaN .contenedorNosotros .imagenesNosotros {
   max-width: 100%;
 }
 
-.nosotros .contenedorNosotros .lista {
+.nosotros .cajaN .contenedorNosotros .lista {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,7 +806,7 @@ footer ul li .iconR:hover {
   padding-left: 5px;
 }
 
-.nosotros .contenedorNosotros .lista:hover {
+.nosotros .cajaN .contenedorNosotros .lista:hover {
   opacity: 1;
 }
 
@@ -715,7 +832,7 @@ footer ul li .iconR:hover {
   }
 }
 
-.nosotros .contenedorNosotros .nombres {
+.nosotros .cajaN .contenedorNosotros .nombres {
   color: white;
   font-family: "Shippori Antique", sans-serif;
   font-size: 1.2rem;
@@ -725,7 +842,7 @@ footer ul li .iconR:hover {
 
 .descripcionFabDupont {
   min-height: calc(100vh - 100px);
-  background-color: #2d2c35;
+  background-color: #202020;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -777,9 +894,9 @@ footer ul li .iconR:hover {
 }
 
 .descripcionFabDupont div div p, .descripcionFabDupont div div .artistas div {
-  color: white;
-  font-size: 17px;
-  font-family: "Shippori Antique", sans-serif;
+  color: #b8b8b8;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -796,11 +913,14 @@ footer ul li .iconR:hover {
 .descripcionFabDupont div div .artistas div {
   margin: auto 5px;
   width: auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
 }
 
 .descripcionCrisLordAlge {
   min-height: calc(100vh - 100px);
-  background-color: #2d2c35;
+  background-color: #202020;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -852,9 +972,9 @@ footer ul li .iconR:hover {
 }
 
 .descripcionCrisLordAlge div div p, .descripcionCrisLordAlge div div .artistas div {
-  color: white;
-  font-size: 17px;
-  font-family: "Shippori Antique", sans-serif;
+  color: #b8b8b8;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -871,11 +991,14 @@ footer ul li .iconR:hover {
 .descripcionCrisLordAlge div div .artistas div {
   margin: auto 5px;
   width: auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
 }
 
 .descripcionAndrewScheps {
   min-height: calc(100vh - 100px);
-  background-color: #2d2c35;
+  background-color: #202020;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -927,9 +1050,9 @@ footer ul li .iconR:hover {
 }
 
 .descripcionAndrewScheps div div p, .descripcionAndrewScheps div div .artistas div {
-  color: white;
-  font-size: 17px;
-  font-family: "Shippori Antique", sans-serif;
+  color: #b8b8b8;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -946,11 +1069,14 @@ footer ul li .iconR:hover {
 .descripcionAndrewScheps div div .artistas div {
   margin: auto 5px;
   width: auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
 }
 
 .descripcionMickGuzauski {
   min-height: calc(100vh - 100px);
-  background-color: #2d2c35;
+  background-color: #202020;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1002,9 +1128,9 @@ footer ul li .iconR:hover {
 }
 
 .descripcionMickGuzauski div div p, .descripcionMickGuzauski div div .artistas div {
-  color: white;
-  font-size: 17px;
-  font-family: "Shippori Antique", sans-serif;
+  color: #b8b8b8;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -1021,11 +1147,14 @@ footer ul li .iconR:hover {
 .descripcionMickGuzauski div div .artistas div {
   margin: auto 5px;
   width: auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
 }
 
 .descripcionTonyMaserati {
   min-height: calc(100vh - 100px);
-  background-color: #2d2c35;
+  background-color: #202020;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1077,9 +1206,9 @@ footer ul li .iconR:hover {
 }
 
 .descripcionTonyMaserati div div p, .descripcionTonyMaserati div div .artistas div {
-  color: white;
-  font-size: 17px;
-  font-family: "Shippori Antique", sans-serif;
+  color: #b8b8b8;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -1096,6 +1225,9 @@ footer ul li .iconR:hover {
 .descripcionTonyMaserati div div .artistas div {
   margin: auto 5px;
   width: auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
 }
 
 /* ------------------productos--------------------- */
@@ -1103,10 +1235,10 @@ footer ul li .iconR:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1116,7 +1248,7 @@ footer ul li .iconR:hover {
   height: auto;
   min-height: calc(100vh - 80px);
   width: 100%;
-  background-color: #2d2c35;
+  background-color: #202020;
   background-image: url(../img/foto2.jpg);
   background-attachment: fixed;
   background-blend-mode: overlay;
@@ -1138,16 +1270,16 @@ footer ul li .iconR:hover {
 .productos .cajaDetalleProductos .detalleProductos {
   color: white;
   text-transform: uppercase;
-  font-size: 2rem;
-  font-family: 'Shippori Antique', sans-serif;
+  font-size: 2.5rem;
+  font-family: "Shippori Antique", sans-serif;
   margin: 10px;
   max-width: 800px;
 }
 
 .productos .cajaDetalleProductos p, .productos .cajaDetalleProductos .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas .productos .cajaDetalleProductos div, .productos .cajaDetalleProductos .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas .productos .cajaDetalleProductos div {
-  color: white;
-  font-size: 20px;
-  font-family: "Shippori Antique", sans-serif;
+  color: #a0a0a0;
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 10px;
   max-width: 800px;
 }
@@ -1159,27 +1291,28 @@ footer ul li .iconR:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: auto;
-  position: absolute;
   bottom: 100px;
   right: 100px;
   max-width: 100%;
+  margin-top: 20px;
 }
 
 .productos .contenedorEnlaces .textoEnlace {
   height: 50px;
-  padding: 0px 20px;
-  font-size: 20px;
+  padding: 0 0.8em;
+  font-size: 1.2rem;
   text-align: center;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Shippori Antique", sans-serif;
   background-color: rgba(250, 74, 74, 0.356);
-  border-radius: 20px;
+  border-radius: 0.8em;
   margin: 5px;
   line-height: 50px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  margin: 1.8em;
 }
 
 .productos .contenedorEnlaces .textoEnlace:hover {
@@ -1191,7 +1324,7 @@ footer ul li .iconR:hover {
   min-height: 100vh;
   height: auto;
   width: 100%;
-  background-color: #2d2c35;
+  background-color: #202020;
   padding-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1239,9 +1372,9 @@ footer ul li .iconR:hover {
 }
 
 .sectionProductos .contenedorProductos .contenedorTextoProductos .descripcionProductos {
-  color: white;
-  font-size: 25px;
-  font-family: "Lato", sans-serif;
+  color: #a0a0a0;
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sectionProductos .contenedorProductos .fotoProducto {
@@ -1259,7 +1392,7 @@ footer ul li .iconR:hover {
   min-height: calc(100vh - 100px);
   height: auto;
   width: 100%;
-  background-color: #2d2c35;
+  background-color: #202020;
   background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
@@ -1274,18 +1407,36 @@ footer ul li .iconR:hover {
 }
 
 .preciosMain .contenedorPrecios {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100%;
   -ms-flex-line-pack: space-evenly;
       align-content: space-evenly;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.preciosMain .contenedorPrecios .botonPrecios {
-  background-color: rgba(250, 74, 74, 0.356);
+.preciosMain .contenedorPrecios .cajaPrecios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 700px;
+  min-height: 300px;
+  width: 100%;
   text-align: center;
   border-radius: 20px;
   -webkit-transition: 0.5s;
@@ -1293,16 +1444,25 @@ footer ul li .iconR:hover {
   margin: 10px;
 }
 
-.preciosMain .contenedorPrecios .botonPrecios .textoPrecios {
+.preciosMain .contenedorPrecios .cajaPrecios p, .preciosMain .contenedorPrecios .cajaPrecios .descripcionFabDupont div div .artistas div, .descripcionFabDupont div div .artistas .preciosMain .contenedorPrecios .cajaPrecios div, .preciosMain .contenedorPrecios .cajaPrecios .descripcionCrisLordAlge div div .artistas div, .descripcionCrisLordAlge div div .artistas .preciosMain .contenedorPrecios .cajaPrecios div, .preciosMain .contenedorPrecios .cajaPrecios .descripcionAndrewScheps div div .artistas div, .descripcionAndrewScheps div div .artistas .preciosMain .contenedorPrecios .cajaPrecios div, .preciosMain .contenedorPrecios .cajaPrecios .descripcionMickGuzauski div div .artistas div, .descripcionMickGuzauski div div .artistas .preciosMain .contenedorPrecios .cajaPrecios div, .preciosMain .contenedorPrecios .cajaPrecios .descripcionTonyMaserati div div .artistas div, .descripcionTonyMaserati div div .artistas .preciosMain .contenedorPrecios .cajaPrecios div {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Shippori Antique", sans-serif;
+  margin: 1em;
+}
+
+.preciosMain .contenedorPrecios .cajaPrecios .textoPrecios {
   font-size: 25px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Shippori Antique", sans-serif;
-  line-height: 50px;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: rgba(250, 74, 74, 0.356);
 }
 
-.preciosMain .contenedorPrecios .botonPrecios:hover {
+.preciosMain .contenedorPrecios .cajaPrecios .textoPrecios:hover {
   background-color: red;
 }
 
@@ -1324,7 +1484,7 @@ footer ul li .iconR:hover {
   display: flex;
   height: calc(100vh - 100px);
   width: 100%;
-  background-color: #2d2c35;
+  background-color: #202020;
   background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;
@@ -1375,7 +1535,7 @@ footer ul li .iconR:hover {
   min-height: calc(100vh - 100px);
   height: auto;
   width: 100%;
-  background-color: #2d2c35;
+  background-color: #202020;
   background-image: url(../img/foto1.jpg);
   background-size: cover;
   background-position: center;

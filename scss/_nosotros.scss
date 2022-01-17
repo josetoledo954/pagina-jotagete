@@ -1,15 +1,28 @@
 .nosotros{
     min-height: calc(100vh - 100px);
     background-color: $colorSecciones;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
     background-image: url(../img/foto1.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & h3{
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: $fuente;
+        margin-bottom:2.5em;
+    }
+    & .cajaN{
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
         & .contenedorNosotros{
             margin-top: 20px;
             & .imagenesNosotros{
@@ -52,6 +65,7 @@
                 text-align: center;
             }
         }
+    }    
 }
 
 
@@ -103,7 +117,7 @@
 
 $estilos:(
     color-letras: white,
-    fuente-alto: 17px,
+    fuente-alto: 1rem,
     ancho: 100%,
 );
 
@@ -131,10 +145,11 @@ $estilos:(
                     font-family: $fuente;
                 }
                 & p{
-                    color: white;
+                    color: rgb(184, 184, 184);
                     font-size: map-get($estilos, fuente-alto);
-                    font-family: $fuente;
+                    font-family: $fuenteParrafo;
                     text-align: center;
+                    
                 }
                 & .artistas{
                     display: flex;
@@ -146,6 +161,10 @@ $estilos:(
                         margin: auto 5px;
                         width: auto;
                         @extend p;
+                        color: white;
+                        font-family: $fuenteNueva;
+                        font-size: 1rem;
+
                     }
                 }
             }
@@ -173,10 +192,11 @@ $estilos:(
                     font-family: $fuente;
                 }
                 & p{
-                    color: white;
+                    color: rgb(184, 184, 184);
                     font-size: map-get($estilos, fuente-alto);
-                    font-family: $fuente;
+                    font-family: $fuenteParrafo;
                     text-align: center;
+                    
                 }
                 & .artistas{
                     display: flex;
@@ -188,6 +208,10 @@ $estilos:(
                         margin: auto 5px;
                         width: auto;
                         @extend p;
+                        color: white;
+                        font-family: $fuenteNueva;
+                        font-size: 1rem;
+
                     }
                 }
             }
@@ -214,10 +238,11 @@ $estilos:(
                     font-family: $fuente;
                 }
                 & p{
-                    color: white;
+                    color: rgb(184, 184, 184);
                     font-size: map-get($estilos, fuente-alto);
-                    font-family: $fuente;
+                    font-family: $fuenteParrafo;
                     text-align: center;
+                    
                 }
                 & .artistas{
                     display: flex;
@@ -229,6 +254,10 @@ $estilos:(
                         margin: auto 5px;
                         width: auto;
                         @extend p;
+                        color: white;
+                        font-family: $fuenteNueva;
+                        font-size: 1rem;
+
                     }
                 }
             }
@@ -256,10 +285,11 @@ $estilos:(
                     font-family: $fuente;
                 }
                 & p{
-                    color: white;
+                    color: rgb(184, 184, 184);
                     font-size: map-get($estilos, fuente-alto);
-                    font-family: $fuente;
+                    font-family: $fuenteParrafo;
                     text-align: center;
+                    
                 }
                 & .artistas{
                     display: flex;
@@ -271,6 +301,10 @@ $estilos:(
                         margin: auto 5px;
                         width: auto;
                         @extend p;
+                        color: white;
+                        font-family: $fuenteNueva;
+                        font-size: 1rem;
+
                     }
                 }
             }
@@ -298,14 +332,15 @@ $estilos:(
                     font-family: $fuente;
                 }
                 & p{
-                    color: white;
-                    font-size: 17px;
-                    font-family: $fuente;
+                    color: rgb(184, 184, 184);
+                    font-size: map-get($estilos, fuente-alto);
+                    font-family: $fuenteParrafo;
                     text-align: center;
+                    
                 }
                 & .artistas{
                     display: flex;
-                    width: 100%;
+                    width: map-get($estilos, ancho);
                     border-top: solid 1px white;
                     padding: 10px;
                     font-style: oblique;
@@ -313,6 +348,10 @@ $estilos:(
                         margin: auto 5px;
                         width: auto;
                         @extend p;
+                        color: white;
+                        font-family: $fuenteNueva;
+                        font-size: 1rem;
+
                     }
                 }
             }

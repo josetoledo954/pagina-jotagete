@@ -2,47 +2,60 @@
 
 footer{
     background-color: $colorNavegador;
-    min-height: 100px;
+    min-height: 400px;
     height: auto;
     font-family: $fuenteNueva;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-evenly;
+    padding-top: 50px;
     & div{
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    & .textoFooter{
-        width: 50%;
-        color: white;
-        text-transform: uppercase;
-        font-size: 15px;
-        margin-top: 10px;
-    }
-    & ul{
-        width: 80%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        & li{
-            color: white;
-            list-style-type: none;
-            font-size: 12px;
-            .icon{
-                color: white;
-                font-size: 30px;
-            }
-            .iconR:hover{
-                color: #aceeff;
+        width: 200px;
+        // padding: 5px;
+        & h2{
+            color: rgb(150, 150, 150);
+            font-family: $fuente;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+        & p{
+            color: rgb(177, 177, 177);
+        }
+        & .textoFooter{
+            color: rgb(151, 151, 151);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-family: $fuente;
+        }
+        & ul{
+            & li{
+                list-style-type: none;
+                margin: 20px 0;
+                color: rgb(163, 163, 163);
+                font-family: $fuenteNueva;
+                font-size: 1rem;
+                .icon{
+                    color: rgb(145, 145, 145);
+                    font-size: 1.2rem;
+                    margin-right: 10px;
+                }
+                .iconR:hover{
+                    color: #aceeff;
+                }
+                & a{
+                    text-decoration: none;
+                    color: rgb(143, 143, 143);
+                    font-family: $fuenteNueva;
+                    font-size: 1rem;
+                }
+                & a:hover{
+                    color: #aceeff;
+                }
             }
         }
     }
-    
 }
 
 

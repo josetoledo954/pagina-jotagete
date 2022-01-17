@@ -3,7 +3,7 @@
 
 .productos{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: auto;
@@ -22,15 +22,15 @@
             & .detalleProductos{
                 color: white;
                 text-transform: uppercase;
-                font-size: 2rem;
-                font-family: 'Shippori Antique', sans-serif;
+                font-size: 2.5rem;
+                font-family: $fuente;
                 margin: 10px;
                 max-width: 800px;
             }
             & p{
-                color: white;
-                font-size: 20px;
-                font-family: $fuente;
+                color: rgb(160, 160, 160);
+                font-size: 1.2rem;
+                font-family: $fuenteParrafo;
                 margin: 10px;
                 max-width: 800px;
             }
@@ -39,24 +39,26 @@
             display: flex;
             flex-wrap: wrap;
             height: auto;
-            position: absolute;
+            // position: absolute;
             bottom: 100px;
             right: 100px;
             max-width: 100%;
+            margin-top: 20px;
                 & .textoEnlace{
                     height: 50px;
-                    padding: 0px 20px;
-                    font-size: 20px;
+                    padding: 0 0.8em;
+                    font-size: 1.2rem;
                     text-align: center;
                     color: white;
                     text-decoration: none;
                     text-transform: uppercase;
                     font-family: $fuente;
                     background-color: rgba(250, 74, 74, 0.356);
-                    border-radius: 20px;
+                    border-radius: 0.8em;
                     margin: 5px;
                     line-height: 50px;
                     transition: 0.5s;
+                    margin: 1.8em;
                 }
                 & .textoEnlace:hover{
                     color: white;
@@ -99,9 +101,9 @@
                 margin-bottom: 25px;
             }
             & .descripcionProductos{
-                color: white;
-                font-size: 25px;
-                font-family: $fuenteNueva;
+                color: rgb(160, 160, 160);
+                font-size: 1.2rem;
+                font-family: $fuenteParrafo;
             }
         }
         & .fotoProducto{
