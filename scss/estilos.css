@@ -601,8 +601,7 @@ main {
 #section4 h2 {
   color: white;
   font-family: "Shippori Antique", sans-serif;
-  text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 3em 0 0.5em;
   margin: 0;
 }
@@ -743,11 +742,10 @@ footer div ul li a:hover {
           justify-content: center;
 }
 
-.nosotros h3 {
+.nosotros .integrantes {
   color: white;
   text-align: center;
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 2.5rem;
   font-family: "Shippori Antique", sans-serif;
   margin-bottom: 2.5em;
 }
