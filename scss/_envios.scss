@@ -2,21 +2,22 @@
 
 .contenedorEnvios{
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
+    background-color: $colorSecciones;
     background-image: url(../img/foto1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-blend-mode: overlay;
     align-content: center;
     justify-content: center;
-    max-width: 100%;
 }
 
 .formularioEnvios{
-    height: 300px;
-    /* width: 500px; */
-    width: auto;
+    min-height: 500px;
+    width: 100%;
     background-color: rgba(45, 44, 53, 0.712);
     color: white;
     font-family: 'Shippori Antique', sans-serif;
@@ -25,6 +26,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
 
 
 /* --------------------envios--------------------------------- */

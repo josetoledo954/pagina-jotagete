@@ -1,6 +1,6 @@
 /* --------------------------secciones----------------------- */
 
-.section{
+section{
     // min-height: calc(100vh - 80px);
     height: auto;
     width: 100%;
@@ -358,6 +358,10 @@
 #modal-content{
     width: auto;
     height: auto;
+    background-color: $colorSecciones;
+    & .modal-body{
+        padding: 0;
+    }
 }
 
 #modal-dialog{
@@ -380,6 +384,26 @@
 
 .fotosModal:hover {
     opacity: 0.5;
+}
+
+.modal-footer .btn{
+    color: rgb(160, 160, 160);
+}
+
+.modal-footer .btn:hover{
+    color: white;
+}
+
+#btn-close{
+    color: rgb(160, 160, 160);
+    background-color: rgb(160, 160, 160);
+}
+.btn-close:hover{
+    color: white;
+}
+
+.modal-title{
+    color: rgb(160, 160, 160);
 }
 
 

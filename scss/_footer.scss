@@ -10,7 +10,7 @@ footer{
     justify-content: space-evenly;
     padding-top: 50px;
     & div{
-        width: 200px;
+        max-width: 200px;
         & .textoFooter{
             color: rgb(160, 160, 160);
             text-transform: uppercase;
